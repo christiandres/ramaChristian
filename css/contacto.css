@@ -18,6 +18,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   margin-top: 27px;
+  background-color: var(--letra);
 }
 
 .texto {
@@ -52,7 +53,7 @@
 
 /****Seccion formulario***  */
 .form-contacto {
-  width: 70%;
+  width: 80%;
   padding: 20px;
   text-align: left;
   margin: 0 auto;
@@ -81,9 +82,38 @@
   width: 100%;
   padding: 7px;
   font-size: 1.1em;
-  border: 1px dotted var(--terciario);
+  border: 1px solid var(--terciario);
   border-radius: 5px;
   margin-top: 7px;
+  transition: .3s ease all;
+}
+
+.terminos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.form_box.ok input {
+  border: 1.5px solid #08ffc8
+}
+
+.form_box.error input {
+  border: 1.5px solid red;;
+}
+
+.form_box .msj-error {
+  visibility:hidden;
+  /* position: absolute; */
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+.form_box.error .msj-error {
+  visibility: visible;
+  color:#e74c3c;
 }
 
 .form_box .submit {
@@ -109,3 +139,4 @@
   font-size: 1em;
   padding: 5px;
 }
+
