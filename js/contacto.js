@@ -34,7 +34,7 @@ function validarInputs() {
 function validarError(input, msje) {
   let formBox = input.parentElement;
   let mensajeError = document.getElementsByClassName('msj-error');
-     mensajeError.innerText = "Debe completar este campo";
+     mensajeError.innerText =msje;
      formBox.className = 'form_box error';
 }
 

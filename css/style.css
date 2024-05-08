@@ -1,49 +1,66 @@
-:root{
+:root {
   --principal: #318c7a;
-  --principalTrans:rgba(49, 140, 122, 0.5);
+  --principalTrans: rgba(49, 140, 122, 0.5);
   --secundario: #92d8e8;
   --terciario: #045163;
-  --letra:#e2ecec;
+  --letra: #e2ecec;
 }
-*{
+
+* {
   padding: 0;
   margin: 0;
   text-decoration: none;
   box-sizing: border-box;
 }
-body{
+
+body {
   width: 90vw;
   margin: auto;
   background-color: var(--principal);
 }
-.header-index{
-  background-image: url('../img/perro-feliz.jpg');
+
+.header-index {
+  background-image: url('../img/new-perro.png');
   background-size: cover;
   background-position: center;
-  height: 100vh; 
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.sombra{
+
+.sombra {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
-#nav-externo{
+
+#nav-externo {
   height: 15%;
 }
-.header-texto{
+.comentario{
+  margin-right: 20vw;
+  height: 60%;
+  width: 100%;
+  text-align: right;
+  align-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.header-texto {
   align-content: flex-end;
   text-align: center;
-  height: 75%;
+  height: 25%;
   padding: 20px;
   border-radius: 10px;
 }
-.header-cuadro{
+
+.header-cuadro {
   background-color: var(--principalTrans);
   border-radius: 20px;
+  width: 700px;
 }
-.inicio-button{
+
+.inicio-button {
   color: var(--letra);
   padding: 0.5 rem 1rem;
   border: none;
@@ -57,27 +74,35 @@ body{
 nav {
   top: 10px;
   background-color: var(--principal);
-  color: var(--letra);  
+  color: var(--letra);
   padding: 10px 0;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
-nav ul{
+
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-nav ul li{
+
+nav ul li {
   display: inline;
   margin-right: 20px;
 }
-nav ul li a{
+
+nav ul li a {
   color: var(--letra);
   text-decoration: none;
   font-weight: bold;
   padding: 10px 20px;
 }
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
 nav a:hover {
   background-color: var(--secundario);
 }
