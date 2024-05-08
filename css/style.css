@@ -2,7 +2,9 @@
   --principal: #318c7a;
   --principalTrans: rgba(49, 140, 122, 0.5);
   --secundario: #92d8e8;
+  --secundarioTrans: rgba(146, 216, 232, 0.5);
   --terciario: #045163;
+  --terciarioTrans: rgba(4, 81, 99, 0.5);
   --letra: #e2ecec;
 }
 
@@ -20,7 +22,7 @@ body {
 }
 
 .header-index {
-  background-image: url('../img/new-perro.png');
+  background-image: url('../img/new-perro2.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -38,16 +40,52 @@ body {
   height: 15%;
 }
 .comentario{
-  margin-right: 20vw;
   height: 60%;
   width: 100%;
-  text-align: right;
-  align-content: center;
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
 }
+.globo{
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  transform: translateX(-50%);
+  padding: 15px;
+  background-color: var(--terciarioTrans);
+  border-radius: 70px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 70%;
+  max-width: 450px;
+}
+.globo:before{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: var(--terciarioTrans);
+  border-radius: 30px;
+  position: absolute;
+  bottom: -65px;
+  left: 370px;
+  z-index: -10;
+}
+.globo:after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: var(--terciarioTrans);
+  border-radius: 25px;
+  position: absolute;
+  bottom: -100px;
+  left: 400px;
+  z-index: -10;
+}
 .header-texto {
-  align-content: flex-end;
+  align-content: center;
   text-align: center;
   height: 25%;
   padding: 20px;
@@ -57,9 +95,11 @@ body {
 .header-cuadro {
   background-color: var(--principalTrans);
   border-radius: 20px;
-  width: 700px;
+  width: 900px;
 }
-
+.header-cuadro h1{
+  font-size: 3rem;
+}
 .inicio-button {
   color: var(--letra);
   padding: 0.5 rem 1rem;
@@ -105,4 +145,5 @@ nav ul li:last-child {
 
 nav a:hover {
   background-color: var(--secundario);
+  border-radius: 5px;
 }
