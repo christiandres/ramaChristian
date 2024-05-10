@@ -127,6 +127,7 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
 .menu {
   background-color: var(--principal);
   display: flex;
@@ -157,7 +158,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .menu-lista li {
@@ -181,16 +182,133 @@ body {
   color: var(--secundario);
   border-radius: 5px;
 }
+/*Estilo pantalla 768 a 1024px*/
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .comentario {
+    font-size: 1.2rem;
+  }
+  .globo {
+    top: 45%;
+    left: 70%;
+    width: 60%;
+    max-width: 350px;
+  }
+  .globo:before {
+    width: 4vw;
+    height: 4vw;
+    bottom: -8vh;
+    left: 33vw;
+  }
 
+  .globo:after {
+    width: 2vw;
+    height: 2vw;
+    bottom: -13vh;
+    left: 36vw;
+  }
+
+  .globo i {
+    font-size: 6rem;
+    bottom: -27vh;
+    left: 55vh;
+  }
+  .header-texto {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .header-cuadro h1 {
+    font-size: 2rem;
+  }
+
+  .inicio-button {
+    font-size: 1.4rem;
+  }
+}
 /*Estilo para tablet*/
 @media (min-width: 461px) and (max-width: 768px) {
-
-}
-/*Estilo para celulares*/
-@media (min-width: 100px) and (max-width:660px) {
   body {
     width: 100%;
-    font-size: 12px;
+    font-size: 14px;
+  }
+
+  .comentario {
+    font-size: 0.9rem;
+  }
+
+  .globo {
+    top: 50%;
+    width: 60%;
+    max-width: 200px;
+    left: 70%;
+  }
+
+  .globo:before {
+    display: none;
+  }
+
+  .globo:after {
+    display: none;
+  }
+
+  .globo i {
+    font-size: 5rem;
+    bottom: -15vh;
+    left: 20vh;
+    z-index: -10;
+    transform: rotate(-35deg);
+  }
+
+  .header-texto {
+    margin-top: 0;
+  }
+
+  .header-cuadro h1 {
+    font-size: 1.5rem;
+  }
+
+  .inicio-button {
+    font-size: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-esc {
+    display: block;
+  }
+
+  .menu-lista {
+    display: none;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: var(--principalTrans);
+    z-index: 2;
+  }
+
+  .menu-lista.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .menu-lista li {
+    margin: 10px 0;
+  }
+
+
+}
+
+/*Estilo para celulares*/
+@media (min-width: 100px) and (max-width:475px) {
+  body {
+    width: 100%;
+    font-size: 12%;
   }
 
   .header-index {
@@ -211,9 +329,11 @@ body {
   .globo:before {
     display: none;
   }
-  .globo:after{
+
+  .globo:after {
     display: none;
   }
+
   .globo i {
     font-size: 5rem;
     bottom: -15vh;
@@ -225,34 +345,43 @@ body {
   .header-texto {
     margin-top: 2vh;
   }
+
   .header-cuadro h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .inicio-button {
     font-size: 1rem;
   }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .menu-esc {
     display: block;
   }
 
   .menu-lista {
     display: none;
-    position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
-    text-align: right;
-    padding: 10px 20px;
-    box-sizing: border-box;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: var(--principalTrans);
+    z-index: 2;
   }
 
   .menu-lista.active {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   .menu-lista li {
     margin: 10px 0;
   }
+
 }
